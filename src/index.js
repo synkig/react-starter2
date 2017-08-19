@@ -1,11 +1,9 @@
 import dva from 'dva';
-import {
-  browerHistory
-} from 'dva/router';
+import { hashHistory } from 'dva/router';
 import './index.css';
 
 const app = dva({
-  history: browerHistory
+  history: hashHistory
 });
 
 app.router(require('./router').default);
