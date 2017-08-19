@@ -19,6 +19,17 @@ function RouterConfig({ history, app }) {
           cb(null, require('./app').default);
         });
       },
+      childRoutes: [
+        {
+          path: 'example',
+          getComponent(nextState, cb) {
+            require.ensure([], (require) => {
+              registerModel(app, require('./example/example.model').default);
+              cb(null, require('./example/example.router').default);
+            });
+          },
+        },
+      ]
     },
   ];
 

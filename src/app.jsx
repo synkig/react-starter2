@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'dva';
+import { Link } from 'dva/router';
 import {
   DatePicker,
   LocaleProvider,
@@ -49,7 +50,11 @@ const App = ({app, children}) => {
               style={{
               lineHeight: '64px'
             }}>
-              <Menu.Item key="1">nav 1</Menu.Item>
+              <SubMenu key="mml" title="MML">
+                <Menu.Item key="">
+                  <Link to="/example">MML Command</Link>
+                </Menu.Item>
+              </SubMenu>
               <Menu.Item key="2">nav 2</Menu.Item>
               <Menu.Item key="3">nav 3</Menu.Item>
             </Menu>
