@@ -50,10 +50,14 @@ const App = ({app, children}) => {
               style={{
               lineHeight: '64px'
             }}>
-              <SubMenu key="mml" title="MML">
-                <Menu.Item key="">
-                  <Link to="/example">MML Command</Link>
-                </Menu.Item>
+              <SubMenu key="main" title={<FormattedMessage id="menu.main"/>}>
+                <SubMenu key="mml" title={<FormattedMessage id="menu.mml"/>}>
+                  <Menu.Item key="">
+                    <Link to="/example">
+                      <FormattedMessage id="menu.mml.command"/>
+                    </Link>
+                  </Menu.Item>
+                </SubMenu>
               </SubMenu>
               <Menu.Item key="2">nav 2</Menu.Item>
               <Menu.Item key="3">nav 3</Menu.Item>

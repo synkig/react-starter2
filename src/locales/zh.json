@@ -1,3 +1,6 @@
 {
-  "hello": "你好"
+  "hello": "你好",
+  "menu.main": "维护",
+  "menu.mml": "MML",
+  "menu.mml.command": "MML命令"
 }
